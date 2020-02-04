@@ -1,0 +1,15 @@
+public int lengthOfLastWord(String s) {
+        if(s==null){
+            return 0;
+        }
+        int count=0;
+        char[] cahrs=s.toCharArray();
+        for(int i=cahrs.length-1;i>=0;i--){
+                    if(cahrs[i]!=' '){
+                        ++count;
+                    }else if (count>0){
+                        return count;
+                    }
+        }
+        return count;
+    }
